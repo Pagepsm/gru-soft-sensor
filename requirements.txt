@@ -1,0 +1,8 @@
+# CUDA 用ビルドは実行環境ごとに異なるため、ここでは固定していません。
+jupyterlab
+matplotlib
+numpy
+pandas
+scikit-learn
+torch
+tqdm

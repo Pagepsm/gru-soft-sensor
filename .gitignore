@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.env.*
+.DS_Store
+Thumbs.db
+
+# Notebook の既定出力先。公開する結果は results/ へ選んで移す。
+GRU_soft_sensor_simulation_v14_results/
+GRU_state_resync_simulation_v2_results/
+
+# 学習途中の大きなファイル
+*.ckpt
+*.pt
+*.pth

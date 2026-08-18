@@ -1,0 +1,5 @@
+comparison,left_model,right_model,definition,mean_delta,std_delta,left_wins,ties,seed_count
+representation_effect_mlp,latent_mlp,direct_mlp,left MAE - right MAE; negative favors left,0.04208715260028839,0.10996260081976662,2,0,5
+representation_effect_gru,latent_gru,direct_gru,left MAE - right MAE; negative favors left,-0.07973452508449555,0.05253320449181303,5,0,5
+estimator_effect_direct,direct_gru,direct_mlp,left MAE - right MAE; negative favors left,0.07436443269252777,0.09451673388540588,1,0,5
+estimator_effect_latent,latent_gru,latent_mlp,left MAE - right MAE; negative favors left,-0.04745724499225616,0.1101241284153155,3,0,5

@@ -1,0 +1,86 @@
+{
+  "config": {
+    "run_stage": "representation",
+    "seed": 42,
+    "T": 50000,
+    "train_ratio": 0.6,
+    "val_ratio": 0.2,
+    "M": 150,
+    "delay": 40,
+    "L": 64,
+    "Lq": 64,
+    "z_dim": 8,
+    "hidden_dim": 48,
+    "batch_size": 128,
+    "quality_batch_size": 32,
+    "epochs_dyn": 35,
+    "epochs_quality": 50,
+    "epochs_joint": 20,
+    "curriculum_epochs_dyn": 15,
+    "patience_dyn": 8,
+    "patience_quality": 10,
+    "min_delta": 1e-05,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "drift_amp": 0.12,
+    "drift_rho": 0.995,
+    "quality_noise_std": 0.75,
+    "outlier_rate": 0.05,
+    "outlier_std": 2.0,
+    "K_train": 20,
+    "quick_mode": false,
+    "show_progress": true
+  },
+  "grids": {
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "drift_modes": [
+      "none",
+      "sin",
+      "ar"
+    ],
+    "z_dims": [
+      4,
+      8,
+      16
+    ],
+    "label_counts": [
+      50,
+      100,
+      200
+    ],
+    "horizons": [
+      1,
+      5,
+      20,
+      50,
+      150,
+      300,
+      450
+    ],
+    "future_u_modes": [
+      "realized_or_planned",
+      "hold_last"
+    ],
+    "disturbance_targets": [
+      "output",
+      "state"
+    ],
+    "lambdas": [
+      0.0,
+      0.05,
+      1.0
+    ]
+  },
+  "device": "cuda",
+  "torch_version": "2.11.0+cu128",
+  "cuda_available": true,
+  "cudnn_enabled": true,
+  "cudnn_version": 91900,
+  "run_started_at": "2026-07-12T08:46:48"
+}

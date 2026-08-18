@@ -1,0 +1,124 @@
+{
+  "stage": "representation",
+  "run_started_at": "2026-07-12T08:46:48",
+  "run_finished_at": "2026-07-12T09:13:57",
+  "config": {
+    "run_stage": "representation",
+    "seed": 42,
+    "T": 50000,
+    "train_ratio": 0.6,
+    "val_ratio": 0.2,
+    "M": 150,
+    "delay": 40,
+    "L": 64,
+    "Lq": 64,
+    "z_dim": 8,
+    "hidden_dim": 48,
+    "batch_size": 128,
+    "quality_batch_size": 32,
+    "epochs_dyn": 35,
+    "epochs_quality": 50,
+    "epochs_joint": 20,
+    "curriculum_epochs_dyn": 15,
+    "patience_dyn": 8,
+    "patience_quality": 10,
+    "min_delta": 1e-05,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "drift_amp": 0.12,
+    "drift_rho": 0.995,
+    "quality_noise_std": 0.75,
+    "outlier_rate": 0.05,
+    "outlier_std": 2.0,
+    "K_train": 20,
+    "quick_mode": false,
+    "show_progress": true
+  },
+  "grids": {
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "drift_modes": [
+      "none",
+      "sin",
+      "ar"
+    ],
+    "z_dims": [
+      4,
+      8,
+      16
+    ],
+    "label_counts": [
+      50,
+      100,
+      200
+    ],
+    "horizons": [
+      1,
+      5,
+      20,
+      50,
+      150,
+      300,
+      450
+    ],
+    "future_u_modes": [
+      "realized_or_planned",
+      "hold_last"
+    ],
+    "disturbance_targets": [
+      "output",
+      "state"
+    ],
+    "lambdas": [
+      0.0,
+      0.05,
+      1.0
+    ]
+  },
+  "practicality_audit": {
+    "q_true_used_for_training": false,
+    "true_state_used_for_training": false,
+    "true_drift_used_for_training": false,
+    "joint_lambda_selected_by": "validation observed-label MAE",
+    "test_used_for_hyperparameter_selection": false,
+    "quality_split_basis": "train by arrival time; validation/test by prediction-time window with arrival availability",
+    "quality_input_interval": "[t-Lq, t)",
+    "undefined_latent_in_quality_history": false,
+    "latent_direct_observation_cutoff_aligned": true,
+    "dynamics_targets_cross_split_boundary": false,
+    "stage7_disturbance_regime": "test_onset",
+    "horizon_future_input_modes": [
+      "realized_or_planned",
+      "hold_last"
+    ],
+    "realized_or_planned_input_note": "upper-bound conditional forecast when future control inputs are already realized or planned",
+    "hold_last_input_note": "practical fallback when future control inputs are unknown",
+    "probe_note": "true phase/drift are simulation diagnostics only and are not fed to the soft-sensor or dynamics models"
+  },
+  "completed_tables": {
+    "04_zdim": 60,
+    "05_labels": 60
+  },
+  "errors": [],
+  "timing": [
+    {
+      "stage": "representation",
+      "test": "04_zdim",
+      "elapsed_sec": 1538.2904674800002,
+      "status": "ok",
+      "finished_at": "2026-07-12T09:12:27"
+    },
+    {
+      "stage": "representation",
+      "test": "05_labels",
+      "elapsed_sec": 90.00058749300001,
+      "status": "ok",
+      "finished_at": "2026-07-12T09:13:57"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "q_true_used_for_training": false,
+  "true_state_used_for_training": false,
+  "true_drift_used_for_training": false,
+  "joint_lambda_selected_by": "validation observed-label MAE",
+  "test_used_for_hyperparameter_selection": false,
+  "quality_split_basis": "train by arrival time; validation/test by prediction-time window with arrival availability",
+  "quality_input_interval": "[t-Lq, t)",
+  "undefined_latent_in_quality_history": false,
+  "latent_direct_observation_cutoff_aligned": true,
+  "dynamics_targets_cross_split_boundary": false,
+  "stage7_disturbance_regime": "test_onset",
+  "horizon_future_input_modes": [
+    "realized_or_planned",
+    "hold_last"
+  ],
+  "realized_or_planned_input_note": "upper-bound conditional forecast when future control inputs are already realized or planned",
+  "hold_last_input_note": "practical fallback when future control inputs are unknown",
+  "probe_note": "true phase/drift are simulation diagnostics only and are not fed to the soft-sensor or dynamics models"
+}
