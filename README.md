@@ -32,7 +32,7 @@ tests/      結果の確認
 archive/    前のNotebook
 ```
 
-実際のコードは `notebooks/GRU_soft_sensor_simulation_v14.ipynb` です。状態再同期に関するコードは `notebooks/GRU_state_resync_simulation_v2.ipynb` にあります。
+シミュレーター＆ソフトセンサの実装は `notebooks/GRU_soft_sensor_simulation_v14.ipynb` です。状態再同期に関するコードは `notebooks/GRU_state_resync_simulation_v2.ipynb` にあります。
 
 ## もし動かす場合
 
