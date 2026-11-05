@@ -1,0 +1,18 @@
+{
+  "q_true_used_for_dt_training": false,
+  "q_true_used_for_quality_training": false,
+  "q_true_used_for_gain_training": false,
+  "true_state_used_for_model_training": false,
+  "true_activity_used_for_model_training": false,
+  "true_activity_used_for_probe_only": true,
+  "oracle_uses_dense_true_quality": true,
+  "oracle_is_diagnostic_only": true,
+  "quality_train_split_basis": "arrival_time < train_end",
+  "validation_selection_uses": "arrived observed quality and sensor losses only",
+  "test_used_for_hyperparameter_selection": false,
+  "replay_inputs": "stored past sensor, control, and missingness histories",
+  "replay_is_open_loop_future_forecast": false,
+  "main_disturbance_onset": "test onset",
+  "dt_quality_joint_finetuning": false,
+  "gain_training_parameters": "gain only; DT and quality head frozen"
+}

@@ -1,0 +1,22 @@
+{
+  "old_simulator_used": true,
+  "fixed_condition": {
+    "drift_mode": "AR",
+    "disturbance_target": "output",
+    "disturbance_regime": "persistent",
+    "z_dim": 8,
+    "train_label_count": 50
+  },
+  "q_true_used_for_training": false,
+  "true_state_used_for_training": false,
+  "true_drift_used_for_training": false,
+  "model_selection_metric": "validation observed-quality SmoothL1 loss",
+  "test_used_for_model_selection": false,
+  "quality_split": "train by arrival time; validation/test by feature-time window",
+  "same_quality_labels_for_all_models": true,
+  "same_quality_seed_for_all_models": true,
+  "same_history_length_for_mlp_and_gru": true,
+  "mlp_history_handling": "flattened fixed-length sequence",
+  "mlp_parameter_matching": "hidden width selected to approximate corresponding GRU parameter count",
+  "latent_model_frozen_during_quality_training": true
+}
