@@ -14,7 +14,7 @@ v14では5つの乱数seedで比較しました。真の品質値に対する平
 
 状態再同期の検証では単純な出力補正が良好でした。実験条件と数値は[実験メモ](docs/experiment_history.md)に、集計結果は[results/v14](results/v14)に保存しています。
 
-## コードを試す
+## コード検証
 
 実装は[主Notebook](notebooks/GRU_soft_sensor_simulation_v14_1_10.ipynb)にあります。状態再同期の試作コードは[archive](archive/GRU_state_resync_simulation_v2.ipynb)に保存しています。
 
